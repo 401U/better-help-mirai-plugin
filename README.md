@@ -2,7 +2,9 @@
 
 > 为 Mirai 提供更好的帮助信息
 
-配置文件： 位于`cc.redme.mirai.plugin.better-help`
+### 配置文件：
+
+位于`cc.redme.mirai.plugin.better-help`
 
 ```yaml
 # /help 的回复格式
@@ -25,3 +27,6 @@ hiddenCommand:
 # 没有可用指令时的回复
 emptyCommandReply: 好像没有什么能帮到你的...
 ```
+
+### 图示：
+![assets/usage.png](assets/usage.png)
