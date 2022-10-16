@@ -4,7 +4,7 @@
 
 ### 配置文件：
 
-位于`cc.redme.mirai.plugin.better-help`
+位于`config/cc.redme.mirai.plugin.better-help/config.yml`
 
 ```yaml
 # /help 的回复格式
