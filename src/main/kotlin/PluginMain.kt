@@ -9,8 +9,8 @@ import net.mamoe.mirai.utils.info
 object PluginMain : KotlinPlugin(
     JvmPluginDescription(
         id = "cc.redme.mirai.plugin.better-help",
-        name = "更好的帮助指令",
-        version = "1.0.0",
+        name = "Better help",
+        version = "1.0.1",
     ) {
         author("YehowahLiu")
     }
