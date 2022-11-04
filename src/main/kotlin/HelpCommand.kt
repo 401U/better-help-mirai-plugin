@@ -41,7 +41,7 @@ object HelpCommand : SimpleCommand(
 
     @Handler
     suspend fun CommandSender.handleString(commandName: String) {
-        if (!commandName.startsWith(commandPrefix) && commandName!="--all")
+        if (!commandName.startsWith(commandPrefix) && commandName != "--all")
             return handleString(commandPrefix + commandName)
 
         sendMessage(when (commandName) {
