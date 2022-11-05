@@ -1,4 +1,5 @@
 package cc.redme.mirai.plugin.betterhelp
+
 import net.mamoe.mirai.console.command.CommandManager.INSTANCE.findDuplicate
 import net.mamoe.mirai.console.command.CommandManager.INSTANCE.register
 import net.mamoe.mirai.console.command.CommandManager.INSTANCE.unregister

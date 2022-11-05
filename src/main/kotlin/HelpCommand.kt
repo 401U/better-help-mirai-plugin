@@ -28,9 +28,9 @@ object HelpCommand : SimpleCommand(
             .joinToString("\n") { command ->
                 "$commandPrefix${command.primaryName} ${command.description}"
             }
-        if(commands.isEmpty()){
+        if (commands.isEmpty()) {
             sendMessage(PluginConfig.emptyCommandReply)
-        }else {
+        } else {
             sendMessage(
                 PluginConfig.helpPattern
                     .replace("{help}", helpMain)
@@ -41,16 +41,16 @@ object HelpCommand : SimpleCommand(
 
     @Handler
     suspend fun CommandSender.handleString(commandName: String) {
-        if (!commandName.startsWith(commandPrefix) && commandName!="--all")
+        if (!commandName.startsWith(commandPrefix) && commandName != "--all")
             return handleString(commandPrefix + commandName)
 
         sendMessage(when (commandName) {
             // https://github.com/mamoe/mirai/blob/dev/mirai-console/backend/mirai-console/src/command/BuiltInCommands.kt#L103
             "--all" -> {
                 val commands = getCommands()
-                if(commands.isEmpty()){
+                if (commands.isEmpty()) {
                     PluginConfig.emptyCommandReply
-                }else{
+                } else {
                     commands.joinToString("\n\n") { command ->
                         val lines = command.usage.lines()
                         if (lines.isEmpty()) "/${command.primaryName} ${command.description}"
